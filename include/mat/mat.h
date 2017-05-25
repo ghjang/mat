@@ -2,10 +2,7 @@
 #define MAT_MAT_H
 
 
-namespace mat
-{
-    
-} // namespace mat
+#include "determinant.h"
 
 
 #endif // MAT_MAT_H
