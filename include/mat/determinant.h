@@ -2,6 +2,10 @@
 #define MAT_DETERMINANT_H
 
 
+#include <array>
+#include <tuple>
+
+
 namespace mat::detail
 {
     constexpr auto factorial(int n)
