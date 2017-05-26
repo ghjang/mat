@@ -19,9 +19,9 @@ namespace mat::detail
 
     template <std::size_t N, int i, std::size_t M>
     constexpr void permutation_index_impl(std::array<int, N> arr,
-                                        std::integral_constant<int, i>,
-                                        std::array<std::array<int, N>, M> & indices,
-                                        int & cnt)
+                                          std::integral_constant<int, i>,
+                                          std::array<std::array<int, N>, M> & indices,
+                                          int & cnt)
     {
         if constexpr (i == N - 1) {
             indices[cnt++] = arr;
