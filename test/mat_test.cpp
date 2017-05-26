@@ -4,7 +4,7 @@
 using namespace mat;
 
 
-TEST_CASE("det", "[mat]")
+TEST_CASE("det basic", "[mat]")
 {
     //==== C++ built-in array ====
 
@@ -42,4 +42,16 @@ TEST_CASE("det", "[mat]")
 
     // runtime calculation
     REQUIRE((det<2>(mat4) == 6));   
+}
+
+TEST_CASE("det", "[mat]")
+{
+    constexpr int mat[2][2] = { { 3, 0 },
+                                { 0, 2 } };
+    static_assert(det(mat) == 6);
+
+    constexpr int mat1[3][3] = { { 1,   0,  0   },
+                                 { 1,   1,  -1  },
+                                 { -2,  0,  3   } };
+    static_assert(det(mat1) == 3);
 }
