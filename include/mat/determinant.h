@@ -152,10 +152,10 @@ namespace mat
     }
 
     /*
-    * NOTE: The most generic version.
-    *        It will work OK only if the mat's size is M x M.
-    *        And the mat should provide 'operator []' for accessing the elements.
-    */
+     * NOTE: The most generic version.
+     *        It will work OK only if the mat's size is M x M.
+     *        And the mat should provide 'operator []' for accessing the elements.
+     */
     template <int M, typename T>
     constexpr auto det(T & mat)
     {
