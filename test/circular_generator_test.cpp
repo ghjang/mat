@@ -20,4 +20,10 @@ TEST_CASE("circular generator operator () ()", "[mat]")
     CHECK(cg() == 2);
     CHECK(cg() == 3);
     CHECK(cg() == 1);
+
+    circular_generator cg1{ std::vector{ 3, 2, 1 } };
+    CHECK(cg1() == 3);
+    CHECK(cg1() == 2);
+    CHECK(cg1() == 1);
+    CHECK(cg1() == 3);
 }
