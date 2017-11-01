@@ -4,6 +4,14 @@
 using namespace mat;
 
 
+TEST_CASE("factorial", "[mat]")
+{
+    static_assert(factorial(-1) == -1);
+    
+    static_assert(factorial(0) == 1);
+    static_assert(factorial(3) == 6);
+}
+
 TEST_CASE("det basic", "[mat]")
 {
     //==== C++ built-in array ====
