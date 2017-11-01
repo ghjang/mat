@@ -5,18 +5,11 @@
 #include <array>
 #include <tuple>
 
+#include "factorial.h"
+
 
 namespace mat::detail
 {
-    constexpr auto factorial(int n)
-    {
-        int v = n ? n : 1;
-        while (n > 1) {
-            v *= --n;
-        }
-        return v;
-    }
-
     template <std::size_t N, int i, std::size_t M>
     constexpr void permutation_index_impl(std::array<int, N> arr,
                                           std::integral_constant<int, i>,
